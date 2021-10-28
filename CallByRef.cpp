@@ -11,10 +11,14 @@ struct Rectangle {
 };
 // 직사각형의 데이터 입력
 void inputData(Rectangle &r){  // 함수 머리부
-	cout << "좌측 하단의 꼭짓점 좌표 : ";
-	cin >> r.x1, r.y1;
-	cout << "우측 상단의 꼭짓점 좌표 : ";
-	cin >> r.x2, r.y2;
+	cout << "좌측 하단의 x축 : ";
+	cin >> r.x1;
+    cout << "좌측 하단의 y축 : ";
+	cin >> r.y1;
+	cout << "우측 상단의 x축 : ";
+	cin >> r.x2;
+    cout << "우측 하단의 y축 : ";
+	cin >> r.y2;
 }
 // 직사각형의 데이터 출력
 void prData(Rectangle r){  // 함수 머리부
@@ -29,8 +33,6 @@ int main(){
 	prData(rectangle);
 	cout << "사각형의 면적 = " << area(rectangle) << endl;
 }
-
-
 
 // 원의 데이터 입력
 void inputData(Circle &c){  // 함수 머리부
@@ -48,6 +50,7 @@ void prData(Circle c){  // 함수 머리부
 	cout << ", " << c.cy << ")" << endl;
 }
 float area(Circle c){return PI * c.radius * c.radius;}
+// 원의 정보를 돌리고 싶다면 주석 해제
 /* int main(){
 	Circle circle = {1, 2, 3};
 	inputData(circle);
